@@ -1,6 +1,6 @@
 ## Interface: 11302
 ## Title: PetXPBar
-## Author: waggz81
+## Author: waggz81, discountry
 ## Notes: Mini Pet experience bar.
 ## Version: 0.1
 
