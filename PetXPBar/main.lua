@@ -8,7 +8,7 @@ local prevXP = nil
 local b = CreateFrame("Frame", nil, UIParent)
 b:SetSize(80, 10)
 b:ClearAllPoints()
-b:SetPoint("BOTTOMLEFT", 245, 755)
+b:SetPoint("LEFT", PetFrameHappiness, "RIGHT", 32, 0)
 b:SetFrameLevel(1)
 
 -- Status Bar
@@ -43,12 +43,12 @@ end)
 
 function PetXPBar:updateText()
 	local level = UnitLevel("pet")
-	print("Pet Level: " .. level)
+	-- print("Pet Level: " .. level)
 	b.bar.tex:SetText(level)
 end
 
 function PetXPBar:updateBar()
 	currXP, nextXP = GetPetExperience()
-	print("Pet Xp: " .. string.format("%2.2f", (currXP / nextXP) * 100) .. "%")
+	-- print("Pet Xp: " .. string.format("%2.2f", (currXP / nextXP) * 100) .. "%")
 	b.bar:SetValue((currXP / nextXP) * 100)
 end
